@@ -23,6 +23,7 @@ BuildRequires:	Qt6Widgets-devel >= %{qtver}
 %endif
 BuildRequires:	cmake >= 3.16
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
+BuildRequires:	kf6-kcontacts-devel >= %{version}
 BuildRequires:	kf6-kcoreaddons-devel >= %{version}
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
