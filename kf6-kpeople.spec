@@ -1,17 +1,17 @@
 # Conditional build:
 %bcond_with	tests		# build without tests
 #
-%define		kdeframever	6.15
+%define		kdeframever	6.16
 %define		qtver		5.15.2
 %define		kfname		kpeople
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf6-%{kfname}
-Version:	6.15.0
+Version:	6.16.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	db479f08002ac2ef0a76995053e08fa5
+# Source0-md5:	400a84a4e5bfbc7666b72cdd945b626c
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
