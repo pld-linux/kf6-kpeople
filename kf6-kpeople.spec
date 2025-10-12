@@ -1,17 +1,17 @@
 # Conditional build:
 %bcond_with	tests		# build without tests
 #
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		kpeople
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	42f3c12b62f03a68402cff5ecc751ea9
+# Source0-md5:	ecc6b110134cc561dde5d9b3f8e3657b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -81,18 +81,18 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %{_datadir}/qlogging-categories6/kpeople.categories
-%attr(755,root,root) %{_libdir}/libKF6People.so.*.*.*
+%{_libdir}/libKF6People.so.*.*.*
 %ghost %{_libdir}/libKF6People.so.6
-%attr(755,root,root) %{_libdir}/libKF6PeopleBackend.so.*.*.*
+%{_libdir}/libKF6PeopleBackend.so.*.*.*
 %ghost %{_libdir}/libKF6PeopleBackend.so.6
-%attr(755,root,root) %{_libdir}/libKF6PeopleWidgets.so.*.*.*
+%{_libdir}/libKF6PeopleWidgets.so.*.*.*
 %ghost %{_libdir}/libKF6PeopleWidgets.so.6
 %dir %{_libdir}/qt6/plugins/kpeople
 %dir %{_libdir}/qt6/plugins/kpeople/datasource
-%attr(755,root,root) %{_libdir}/qt6/plugins/kpeople/datasource/KPeopleVCard.so
+%{_libdir}/qt6/plugins/kpeople/datasource/KPeopleVCard.so
 %dir %{_libdir}/qt6/qml/org/kde/people
 %{_libdir}/qt6/qml/org/kde/people/qmldir
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/people/libKF6PeopleDeclarative.so
+%{_libdir}/qt6/qml/org/kde/people/libKF6PeopleDeclarative.so
 %{_datadir}/qlogging-categories6/kpeople.renamecategories
 %{_libdir}/qt6/qml/org/kde/people/KF6PeopleDeclarative.qmltypes
 %{_libdir}/qt6/qml/org/kde/people/kde-qmlmodule.version
