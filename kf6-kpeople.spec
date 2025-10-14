@@ -2,7 +2,7 @@
 %bcond_with	tests		# build without tests
 #
 %define		kdeframever	6.19
-%define		qtver		5.15.2
+%define		qtver		6.7.0
 %define		kfname		kpeople
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf6-%{kfname}
@@ -14,20 +14,23 @@ Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{v
 # Source0-md5:	ecc6b110134cc561dde5d9b3f8e3657b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
-BuildRequires:	Qt6Network-devel >= %{qtver}
-BuildRequires:	Qt6Test-devel >= %{qtver}
-%if %{with tests}
-BuildRequires:	Qt6Gui-devel >= %{qtver}
+BuildRequires:	Qt6Sql-devel >= %{qtver}
+BuildRequires:	Qt6Qml-devel >= %{qtver}
+BuildRequires:	Qt6Quick-devel >= %{qtver}
+%{?with_tests:BuildRequires:	Qt6Test-devel >= %{qtver}}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
-%endif
 BuildRequires:	cmake >= 3.16
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
-BuildRequires:	kf6-kcontacts-devel >= %{version}
-BuildRequires:	kf6-kcoreaddons-devel >= %{version}
+BuildRequires:	kf6-kcontacts-devel >= %{kdeframever}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-ki18n-devel >= %{kdeframever}
+BuildRequires:	kf6-kitemviews-devel >= %{kdeframever}
+BuildRequires:	kf6-kwidgetsaddons-devel >= %{kdeframever}
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	kf6-dirs
