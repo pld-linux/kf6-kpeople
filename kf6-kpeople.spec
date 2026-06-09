@@ -16,9 +16,9 @@ URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
-BuildRequires:	Qt6Sql-devel >= %{qtver}
 BuildRequires:	Qt6Qml-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
+BuildRequires:	Qt6Sql-devel >= %{qtver}
 %{?with_tests:BuildRequires:	Qt6Test-devel >= %{qtver}}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16
@@ -40,6 +40,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Provides access to all contacts and the people who hold them.
+
+%description -l pl.UTF-8
+Daje dostęp do wszystkich kontaktów i ludzi, którzy je utrzymują.
 
 %package devel
 Summary:	Header files for %{kfname} development
